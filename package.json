@@ -2,9 +2,12 @@
   "name": "gamepoints",
   "version": "0.0.1",
   "description": "a case by Kahoot!",
-  "main": "index.js",
+  "main": "app.tsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server",
+    "lint": "eslint --fix --ext .ts,.tsx ./src",
+    "pretty": "prettier \"src/**/*.{ts,tsx}\"",
+    "types:check": "tsc --skipLibCheck"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,43 @@
   "bugs": {
     "url": "https://github.com/j4hr3n/gamepoints/issues"
   },
-  "homepage": "https://github.com/j4hr3n/gamepoints#readme"
+  "homepage": "https://github.com/j4hr3n/gamepoints#readme",
+  "dependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "normalize.css": "^8.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/styled-components": "^4.1.16",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.11.0",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.17.1",
+    "react-svg-loader": "^3.0.3",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.5.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
+  }
 }
